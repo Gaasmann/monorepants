@@ -6,6 +6,7 @@ python_awslambda(
   handler="turbocorp.cards.entrypoint:handler",
   dependencies=[
       "py/projects/cards/ext-config/something:tutu",
-      "py/projects/cards/ext-config/something:protobuf"
+      "py/projects/cards/ext-config/something:protobuf",
+      "py/projects/cards/ext-config/something:aresource"
   ]
 )

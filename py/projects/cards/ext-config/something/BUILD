@@ -2,6 +2,11 @@ protobuf_sources(
   name="protobuf"
 )
 
+resource(
+  name="aresource",
+  source="a-resource-file"
+)
+
 tutu_sources(
   name="tutu",
   sources=["*.yaml"]
@@ -10,7 +15,7 @@ tutu_sources(
 python_requirement(
   name="reqs-protobuf",
   requirements=[
-      "grpcio==1.32.0",
-      "protobuf>=3.12.1"
+      "grpcio==1.47.0",
+      "protobuf==4.21.4"
   ]
 )
