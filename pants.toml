@@ -1,0 +1,30 @@
+[GLOBAL]
+pants_version = "2.12.0+git5d31cdb5"
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.python.lint.black",
+    "pants.backend.python.lint.flake8",
+    "pants.backend.python.typecheck.mypy",
+    "pants.backend.awslambda.python",
+    "pants.backend.codegen.protobuf.python",
+    "pants.backend.plugin_development",
+    "tutu"
+]
+pythonpath = ["%(buildroot)s/pants-plugins"]
+
+[anonymous-telemetry]
+enabled = false
+
+[source]
+#marker_filenames = ["pyproject.toml"]
+root_patterns = ["py/projects/*", "py/projects/*/src", "pants-plugins"]
+
+[python]
+interpreter_constraints = ["CPython==3.9.*"]
+tailor_ignore_solitary_init_files = false
+
+[test]
+use_coverage = true
+
+[pytest]
+args = ["--import-mode=importlib"]

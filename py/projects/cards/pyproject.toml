@@ -1,18 +1,17 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "chier"
+name = "cards"
 version = "0.0.1"
 authors = [
   { name="Nicolas Haller", email="nicolas@boiteameuh.org" },
 ]
-description = "A small standalone app"
+description = "A small app to play with playing cards."
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.10"
-dependencies = ["libchier"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -20,4 +19,4 @@ classifiers = [
 ]
 
 [project.scripts]
-chier = "chier:entrypoint"
+cards = "turbocorp.cards.entrypoint:entrypoint"
