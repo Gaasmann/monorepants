@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from pants.core.target_types import ResourceSourceField
 from pants.engine.fs import DigestContents, Digest, FileContent, CreateDigest, Snapshot
 from pants.engine.internals.selectors import Get
 from pants.engine.rules import collect_rules, rule
@@ -30,7 +31,7 @@ class TutuDependenciesField(Dependencies):
 
 class GenerateTutuRequest(GenerateSourcesRequest):
     input = YamlSourceField
-    output = YamlSourceField
+    output = ResourceSourceField
 
 
 class TutuSourceTarget(Target):
